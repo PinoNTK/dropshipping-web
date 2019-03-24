@@ -667,16 +667,16 @@ Copyright &copy;2019 All rights reserved.</div>
 		})
 	})
 	$('#btnSearch').click(function () {
-		var time=$('#datetimepicker').val();
-		var numoforder=$('#numoforders').val();
+		var time=$('#datetimepicker').val().toString();
+		var numoforder=$('#numoforders').val().toString();
 		console.log(time,numoforder)
-		var params=[{'time':time,'#oforder':numoforder}]
+		var params=[{'time':time},{'#oforder':numoforder}]
 		jQuery.ajax({
             url: '/get-product-list',
             type: "POST",
-            data: params,
+            data: {'data':JSON.stringify(params)},
             processData: false,
-            contentType: false,
+            contentType: "application/json",
             success: function (result) {
 				console.log(result)
 				$.fn.genListProducts(result)
