@@ -58,11 +58,11 @@ angular.module('myApp', [])
     //
 	// 	})
 	// })
-	$('#btnSearch').click(function () {
-		var time=$('#datetimepicker').val();
-		var numoforder=$('#numoforders').val();
-		console.log(time,numoforder)
-		var params=[{'time':time,'#oforder':numoforder}]
-
-    })
+	// $('#btnSearch').click(function () {
+	// 	var time=$('#datetimepicker').val();
+	// 	var numoforder=$('#numoforders').val();
+	// 	console.log(time,numoforder)
+	// 	var params=[{'time':time,'#oforder':numoforder}]
+    //
+    // })
 });

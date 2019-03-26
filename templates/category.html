@@ -33,15 +33,15 @@
 		</form>
 	</div>
 	<!-- Navigation -->
-	<div class="menu_nav">
-		<ul>
-			<li><a href="#">Women</a></li>
-			<li><a href="#">Men</a></li>
-			<li><a href="#">Kids</a></li>
-			<li><a href="#">Home Deco</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</div>
+	<!--<div class="menu_nav">-->
+		<!--<ul>-->
+			<!--<li><a href="#">Women</a></li>-->
+			<!--<li><a href="#">Men</a></li>-->
+			<!--<li><a href="#">Kids</a></li>-->
+			<!--<li><a href="#">Home Deco</a></li>-->
+			<!--<li><a href="#">Contact</a></li>-->
+		<!--</ul>-->
+	<!--</div>-->
 	<!-- Contact Info -->
 	<div class="menu_contact">
 		<div class="menu_phone d-flex flex-row align-items-center justify-content-start">
@@ -86,20 +86,20 @@
 			</nav>
 			<div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
 				<!-- Search -->
-				<div class="header_search">
-					<form action="#" id="header_search_form">
-						<input type="text" class="search_input" placeholder="Search Item" required="required">
-						<button class="header_search_button"><img src="static/images/search.png" alt=""></button>
-					</form>
-				</div>
+				<!--<div class="header_search">-->
+					<!--<form action="#" id="header_search_form">-->
+						<!--<input type="text" class="search_input" placeholder="Search Item" required="required">-->
+						<!--<button class="header_search_button"><img src="static/images/search.png" alt=""></button>-->
+					<!--</form>-->
+				<!--</div>-->
 				<!-- User -->
-				<div class="user"><a href="#"><div><img src="static/images/user.svg" alt="https://www.flaticon.com/authors/freepik"><div>1</div></div></a></div>
+				<!--<div class="user"><a href="#"><div><img src="static/images/user.svg" alt="https://www.flaticon.com/authors/freepik"><div>1</div></div></a></div>-->
 				<!-- Cart -->
 				<!--<div class="cart"><a href="cart.html"><div><img class="svg" src="static/images/cart.svg" alt="https://www.flaticon.com/authors/freepik"></div></a></div>-->
 				<!-- Phone -->
 				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
-					<div><div><img src="static/images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
-					<div>+1 912-252-7350</div>
+					<div><div><img src="static/images/email.svg" ></div></div>
+					<div>Việt: +84 363-568-384</div>
 				</div>
 			</div>
 		</div>
@@ -113,7 +113,7 @@
 		<div class="home">
 			<div class="home_container d-flex flex-column align-items-center justify-content-end">
 				<div class="home_content text-center">
-					<div class="home_title">Your Dedicated Products</div>
+					<div class="home_title">Products Filter</div>
 					<div class="breadcrumbs d-flex flex-column align-items-center justify-content-center">
 						<!--<ul class="d-flex flex-row align-items-start justify-content-start text-center">-->
 							<!--<li><a href="#">Home</a></li>-->
@@ -162,7 +162,7 @@
 				<!--<li class="gap"></li>-->
 			<!--</ul>-->
 			<div class="container">
-				<div class="row products_row products_container grid" id="product_list">
+				<div class="row products_row products_container grid" id="product_list" style="height: auto!important;">
 					<!--&lt;!&ndash; Product &ndash;&gt;-->
 					<!--<div class="col-xl-4 col-md-6 grid-item new">-->
 						<!--<div class="product">-->
@@ -480,10 +480,25 @@
 				<div class="cd-filter-block">
 					<h4>Number of Orders</h4>
 					<div class="cd-filter-content">
-						<input id="numoforders" type="number" style="    width: 100%; padding: .8em;">
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="minoforders" type="number" style="    width: 100%; padding: .8em;" placeholder="Min">
+                            </div>
+                            <div class="col-6">
+                                <input id="maxoforders" type="number" style="    width: 100%; padding: .8em;" placeholder="Max">
+                            </div>
+                        </div>
+
 					</div>
 
-				</div> <!-- cd-filter-block -->
+				</div>
+                <div class="cd-filter-block">
+					<h4>Rating</h4>
+					<div class="cd-filter-content">
+						<input id="numofstars" type="number" style="    width: 100%; padding: .8em;">
+					</div>
+
+				</div>
 
 				<hr>
 				<br>
@@ -502,82 +517,82 @@
 		<!-- Footer -->
 
 		<footer class="footer">
-			<div class="footer_content">
-				<div class="container">
-					<div class="row">
-						
-						<!-- About -->
-						<div class="col-lg-4 footer_col">
-							<div class="footer_about">
-								<div class="footer_logo">
-									<a href="#">
-										<div class="d-flex flex-row align-items-center justify-content-start">
-											<div class="footer_logo_icon"><img src="static/images/logo_2.png" alt=""></div>
-											<div>Products</div>
-										</div>
-									</a>		
-								</div>
-								<!--<div class="footer_about_text">-->
-									<!--<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Fusce venenatis vel velit vel euismod.</p>-->
+			<!--<div class="footer_content">-->
+				<!--<div class="container">-->
+					<!--<div class="row">-->
+						<!---->
+						<!--&lt;!&ndash; About &ndash;&gt;-->
+						<!--<div class="col-lg-4 footer_col">-->
+							<!--<div class="footer_about">-->
+								<!--<div class="footer_logo">-->
+									<!--<a href="#">-->
+										<!--<div class="d-flex flex-row align-items-center justify-content-start">-->
+											<!--<div class="footer_logo_icon"><img src="static/images/logo_2.png" alt=""></div>-->
+											<!--<div>Products</div>-->
+										<!--</div>-->
+									<!--</a>		-->
 								<!--</div>-->
-							</div>
-						</div>
+								<!--&lt;!&ndash;<div class="footer_about_text">&ndash;&gt;-->
+									<!--&lt;!&ndash;<p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Fusce venenatis vel velit vel euismod.</p>&ndash;&gt;-->
+								<!--&lt;!&ndash;</div>&ndash;&gt;-->
+							<!--</div>-->
+						<!--</div>-->
 
-						<!-- Footer Links -->
-						<div class="col-lg-4 footer_col">
-							<div class="footer_menu">
-								<div class="footer_title">Support</div>
-								<ul class="footer_list">
-									<li>
-										<a href="#"><div>Customer Service<div class="footer_tag_1">online now</div></div></a>
-									</li>
-									<li>
-										<a href="#"><div>Return Policy</div></a>
-									</li>
-									<li>
-										<a href="#"><div>Size Guide<div class="footer_tag_2">recommended</div></div></a>
-									</li>
-									<li>
-										<a href="#"><div>Terms and Conditions</div></a>
-									</li>
-									<li>
-										<a href="#"><div>Contact</div></a>
-									</li>
-								</ul>
-							</div>
-						</div>
+						<!--&lt;!&ndash; Footer Links &ndash;&gt;-->
+						<!--<div class="col-lg-4 footer_col">-->
+							<!--<div class="footer_menu">-->
+								<!--<div class="footer_title">Support</div>-->
+								<!--<ul class="footer_list">-->
+									<!--<li>-->
+										<!--<a href="#"><div>Customer Service<div class="footer_tag_1">online now</div></div></a>-->
+									<!--</li>-->
+									<!--<li>-->
+										<!--<a href="#"><div>Return Policy</div></a>-->
+									<!--</li>-->
+									<!--<li>-->
+										<!--<a href="#"><div>Size Guide<div class="footer_tag_2">recommended</div></div></a>-->
+									<!--</li>-->
+									<!--<li>-->
+										<!--<a href="#"><div>Terms and Conditions</div></a>-->
+									<!--</li>-->
+									<!--<li>-->
+										<!--<a href="#"><div>Contact</div></a>-->
+									<!--</li>-->
+								<!--</ul>-->
+							<!--</div>-->
+						<!--</div>-->
 
-						<!-- Footer Contact -->
-						<div class="col-lg-4 footer_col">
-							<div class="footer_contact">
-								<div class="footer_title">Stay in Touch</div>
-								<div class="newsletter">
-									<form action="#" id="newsletter_form" class="newsletter_form">
-										<input type="email" class="newsletter_input" placeholder="Subscribe to our Newsletter" required="required">
-										<button class="newsletter_button">+</button>
-									</form>
-								</div>
-								<div class="footer_social">
-									<div class="footer_title">Social</div>
-									<ul class="footer_social_list d-flex flex-row align-items-start justify-content-start">
-										<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-										<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+						<!--&lt;!&ndash; Footer Contact &ndash;&gt;-->
+						<!--<div class="col-lg-4 footer_col">-->
+							<!--<div class="footer_contact">-->
+								<!--<div class="footer_title">Stay in Touch</div>-->
+								<!--<div class="newsletter">-->
+									<!--<form action="#" id="newsletter_form" class="newsletter_form">-->
+										<!--<input type="email" class="newsletter_input" placeholder="Subscribe to our Newsletter" required="required">-->
+										<!--<button class="newsletter_button">+</button>-->
+									<!--</form>-->
+								<!--</div>-->
+								<!--<div class="footer_social">-->
+									<!--<div class="footer_title">Social</div>-->
+									<!--<ul class="footer_social_list d-flex flex-row align-items-start justify-content-start">-->
+										<!--<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>-->
+										<!--<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>-->
+										<!--<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>-->
+										<!--<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>-->
+									<!--</ul>-->
+								<!--</div>-->
+							<!--</div>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+			<!--</div>-->
 			<div class="footer_bar">
 				<div class="container">
 					<div class="row">
 						<div class="col">
 							<div class="footer_bar_content d-flex flex-md-row flex-column align-items-center justify-content-start">
 								<div class="copyright order-md-1 order-2" style="margin-left: 40%;"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;2019 All rights reserved.</div>
+Copyright &copy; 2019 All rights reserved. <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Techainer</div>
 								<!--<nav class="footer_nav ml-md-auto order-md-2 order-1">-->
 									<!--<ul class="d-flex flex-row align-items-center justify-content-start">-->
 										<!--<li><a href="category.html">Women</a></li>-->
@@ -618,18 +633,13 @@ Copyright &copy;2019 All rights reserved.</div>
 <script src="static/js/angular.js"></script>
 <script src="static/js/filterController.js"></script>
 <script>
-	setTimeout(function () {
-		$('#filter').trigger('click');
-    },1000)
-	$('#datetimepicker').datetimepicker();
-	var productList=[ { "_id": { "$oid": "5c77b508ee0357a9f6b68c61" }, "product_id": "en32949152144", "vendor": "aliexpress", "category": ["Home", "All Categories", "Toys & Hobbies", "Electronic Toys"], "crawledTime": 13, "images": [ "https://ae01.alicdn.com/kf/HLB1Ek60XE_rK1Rjy0Fcq6zEvVXa3/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1MonZXyDxK1Rjy1zcq6yGeXXaP/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1gQ6VXyrxK1RkHFCcq6AQCVXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1b_20XyzxK1RkSnaVq6xn9VXa1/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1I_DZXvfsK1RjSszbq6AqBXXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1eJf1XsvrK1Rjy0Feq6ATmVXaG/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg" ], "lastUpdate": { "$date": "2019-03-03T11:13:47.378+0000" }, "name": "Electronic Fish Swim Toy Battery Included Robotic Pet for Kids Bath Toy Fishing Tank Decorating Act Like Real Fish Dropshipping", "price": [ { "time": { "$date": "2019-02-28T17:16:40.603+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T17:28:37.746+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T18:12:24.589+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:02:11.710+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:03:09.433+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:04:09.882+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:05:52.207+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:09:13.549+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:40:52.209+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:48:25.938+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:49:22.755+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:50:09.620+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-03T11:13:47.377+0000" }, "value": "1.55", "currency": "USD" } ], "quantity": [ { "time": { "$date": "2019-02-28T17:16:40.601+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T17:28:37.744+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T18:12:24.586+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T21:02:11.707+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:03:09.430+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:04:09.879+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:05:52.203+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:09:13.546+0000" }, "buyableQtyPerCustomer": 4071 }, { "time": { "$date": "2019-03-02T18:40:52.206+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:48:25.936+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:49:22.753+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:50:09.618+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-03T11:13:47.375+0000" }, "buyableQtyPerCustomer": null } ], "rating": [ { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 } ], "seller": { "name": "Dreaming Toy Store", "link": "https://www.aliexpress.com/store/1368152" }, "totalOrder": [ { "value": 325, "time": { "$date": "2019-02-28T17:16:40.601+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T17:28:37.744+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T18:12:24.586+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:02:11.707+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:03:09.430+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:04:09.878+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:05:52.203+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:09:13.546+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:40:52.206+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:48:25.936+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:49:22.753+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:50:09.618+0000" } }, { "value": 345, "time": { "$date": "2019-03-03T11:13:47.374+0000" } } ], "url": "https://www.aliexpress.com/item/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act/32949152144.html", "unit": "piece" }, { "_id": { "$oid": "5c77b508ee0357a9f6b68c61" }, "product_id": "en32949152144", "vendor": "aliexpress", "category": ["Home", "All Categories", "Toys & Hobbies", "Electronic Toys"], "crawledTime": 13, "images": [ "https://ae01.alicdn.com/kf/HLB1Ek60XE_rK1Rjy0Fcq6zEvVXa3/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1MonZXyDxK1Rjy1zcq6yGeXXaP/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1gQ6VXyrxK1RkHFCcq6AQCVXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1b_20XyzxK1RkSnaVq6xn9VXa1/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1I_DZXvfsK1RjSszbq6AqBXXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1eJf1XsvrK1Rjy0Feq6ATmVXaG/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg" ], "lastUpdate": { "$date": "2019-03-03T11:13:47.378+0000" }, "name": "Electronic Fish Swim Toy Battery Included Robotic Pet for Kids Bath Toy Fishing Tank Decorating Act Like Real Fish Dropshipping", "price": [ { "time": { "$date": "2019-02-28T17:16:40.603+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T17:28:37.746+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T18:12:24.589+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:02:11.710+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:03:09.433+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:04:09.882+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:05:52.207+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:09:13.549+0000" }, "value": 1.55, "currency": "USD" }, { "time": { "$date": "2019-03-02T18:40:52.209+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:48:25.938+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:49:22.755+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:50:09.620+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-03T11:13:47.377+0000" }, "value": "1.55", "currency": "USD" } ], "quantity": [ { "time": { "$date": "2019-02-28T17:16:40.601+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T17:28:37.744+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T18:12:24.586+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T21:02:11.707+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:03:09.430+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:04:09.879+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:05:52.203+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:09:13.546+0000" }, "buyableQtyPerCustomer": 4071 }, { "time": { "$date": "2019-03-02T18:40:52.206+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:48:25.936+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:49:22.753+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:50:09.618+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-03T11:13:47.375+0000" }, "buyableQtyPerCustomer": null } ], "rating": [ { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 } ], "seller": { "name": "Dreaming Toy Store", "link": "https://www.aliexpress.com/store/1368152" }, "totalOrder": [ { "value": 325, "time": { "$date": "2019-02-28T17:16:40.601+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T17:28:37.744+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T18:12:24.586+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:02:11.707+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:03:09.430+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:04:09.878+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:05:52.203+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:09:13.546+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:40:52.206+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:48:25.936+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:49:22.753+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:50:09.618+0000" } }, { "value": 345, "time": { "$date": "2019-03-03T11:13:47.374+0000" } } ], "url": "https://www.aliexpress.com/item/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act/32949152144.html", "unit": "piece" }, { "_id": { "$oid": "5c77b508ee0357a9f6b68c61" }, "product_id": "en32949152144", "vendor": "aliexpress", "category": ["Home", "All Categories", "Toys & Hobbies", "Electronic Toys"], "crawledTime": 13, "images": [ "https://ae01.alicdn.com/kf/HLB1Ek60XE_rK1Rjy0Fcq6zEvVXa3/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1MonZXyDxK1Rjy1zcq6yGeXXaP/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1gQ6VXyrxK1RkHFCcq6AQCVXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1b_20XyzxK1RkSnaVq6xn9VXa1/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1I_DZXvfsK1RjSszbq6AqBXXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1eJf1XsvrK1Rjy0Feq6ATmVXaG/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg" ], "lastUpdate": { "$date": "2019-03-03T11:13:47.378+0000" }, "name": "Electronic Fish Swim Toy Battery Included Robotic Pet for Kids Bath Toy Fishing Tank Decorating Act Like Real Fish Dropshipping", "price": [ { "time": { "$date": "2019-02-28T17:16:40.603+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T17:28:37.746+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T18:12:24.589+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:02:11.710+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:03:09.433+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:04:09.882+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:05:52.207+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:09:13.549+0000" }, "value": 1.55, "currency": "USD" }, { "time": { "$date": "2019-03-02T18:40:52.209+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:48:25.938+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:49:22.755+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:50:09.620+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-03T11:13:47.377+0000" }, "value": "1.55", "currency": "USD" } ], "quantity": [ { "time": { "$date": "2019-02-28T17:16:40.601+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T17:28:37.744+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T18:12:24.586+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T21:02:11.707+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:03:09.430+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:04:09.879+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:05:52.203+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:09:13.546+0000" }, "buyableQtyPerCustomer": 4071 }, { "time": { "$date": "2019-03-02T18:40:52.206+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:48:25.936+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:49:22.753+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:50:09.618+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-03T11:13:47.375+0000" }, "buyableQtyPerCustomer": null } ], "rating": [ { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 } ], "seller": { "name": "Dreaming Toy Store", "link": "https://www.aliexpress.com/store/1368152" }, "totalOrder": [ { "value": 325, "time": { "$date": "2019-02-28T17:16:40.601+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T17:28:37.744+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T18:12:24.586+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:02:11.707+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:03:09.430+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:04:09.878+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:05:52.203+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:09:13.546+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:40:52.206+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:48:25.936+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:49:22.753+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:50:09.618+0000" } }, { "value": 345, "time": { "$date": "2019-03-03T11:13:47.374+0000" } } ], "url": "https://www.aliexpress.com/item/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act/32949152144.html", "unit": "piece" }, { "_id": { "$oid": "5c77b508ee0357a9f6b68c61" }, "product_id": "en32949152144", "vendor": "aliexpress", "category": ["Home", "All Categories", "Toys & Hobbies", "Electronic Toys"], "crawledTime": 13, "images": [ "https://ae01.alicdn.com/kf/HLB1Ek60XE_rK1Rjy0Fcq6zEvVXa3/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1MonZXyDxK1Rjy1zcq6yGeXXaP/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1gQ6VXyrxK1RkHFCcq6AQCVXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1b_20XyzxK1RkSnaVq6xn9VXa1/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1I_DZXvfsK1RjSszbq6AqBXXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1eJf1XsvrK1Rjy0Feq6ATmVXaG/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg" ], "lastUpdate": { "$date": "2019-03-03T11:13:47.378+0000" }, "name": "Electronic Fish Swim Toy Battery Included Robotic Pet for Kids Bath Toy Fishing Tank Decorating Act Like Real Fish Dropshipping", "price": [ { "time": { "$date": "2019-02-28T17:16:40.603+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T17:28:37.746+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T18:12:24.589+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:02:11.710+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:03:09.433+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:04:09.882+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:05:52.207+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:09:13.549+0000" }, "value": 1.55, "currency": "USD" }, { "time": { "$date": "2019-03-02T18:40:52.209+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:48:25.938+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:49:22.755+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:50:09.620+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-03T11:13:47.377+0000" }, "value": "1.55", "currency": "USD" } ], "quantity": [ { "time": { "$date": "2019-02-28T17:16:40.601+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T17:28:37.744+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T18:12:24.586+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T21:02:11.707+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:03:09.430+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:04:09.879+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:05:52.203+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:09:13.546+0000" }, "buyableQtyPerCustomer": 4071 }, { "time": { "$date": "2019-03-02T18:40:52.206+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:48:25.936+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:49:22.753+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:50:09.618+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-03T11:13:47.375+0000" }, "buyableQtyPerCustomer": null } ], "rating": [ { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 } ], "seller": { "name": "Dreaming Toy Store", "link": "https://www.aliexpress.com/store/1368152" }, "totalOrder": [ { "value": 325, "time": { "$date": "2019-02-28T17:16:40.601+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T17:28:37.744+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T18:12:24.586+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:02:11.707+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:03:09.430+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:04:09.878+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:05:52.203+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:09:13.546+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:40:52.206+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:48:25.936+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:49:22.753+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:50:09.618+0000" } }, { "value": 345, "time": { "$date": "2019-03-03T11:13:47.374+0000" } } ], "url": "https://www.aliexpress.com/item/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act/32949152144.html", "unit": "piece" }, { "_id": { "$oid": "5c77b508ee0357a9f6b68c61" }, "product_id": "en32949152144", "vendor": "aliexpress", "category": ["Home", "All Categories", "Toys & Hobbies", "Electronic Toys"], "crawledTime": 13, "images": [ "https://ae01.alicdn.com/kf/HLB1Ek60XE_rK1Rjy0Fcq6zEvVXa3/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1MonZXyDxK1Rjy1zcq6yGeXXaP/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1gQ6VXyrxK1RkHFCcq6AQCVXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1b_20XyzxK1RkSnaVq6xn9VXa1/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1I_DZXvfsK1RjSszbq6AqBXXaT/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg", "https://ae01.alicdn.com/kf/HLB1eJf1XsvrK1Rjy0Feq6ATmVXaG/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act.jpg" ], "lastUpdate": { "$date": "2019-03-03T11:13:47.378+0000" }, "name": "Electronic Fish Swim Toy Battery Included Robotic Pet for Kids Bath Toy Fishing Tank Decorating Act Like Real Fish Dropshipping", "price": [ { "time": { "$date": "2019-02-28T17:16:40.603+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T17:28:37.746+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T18:12:24.589+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:02:11.710+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:03:09.433+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:04:09.882+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:05:52.207+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-02-28T21:09:13.549+0000" }, "value": 1.55, "currency": "USD" }, { "time": { "$date": "2019-03-02T18:40:52.209+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:48:25.938+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:49:22.755+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-02T18:50:09.620+0000" }, "value": "1.55", "currency": "USD" }, { "time": { "$date": "2019-03-03T11:13:47.377+0000" }, "value": "1.55", "currency": "USD" } ], "quantity": [ { "time": { "$date": "2019-02-28T17:16:40.601+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T17:28:37.744+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T18:12:24.586+0000" }, "buyableQtyPerCustomer": "4073" }, { "time": { "$date": "2019-02-28T21:02:11.707+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:03:09.430+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:04:09.879+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:05:52.203+0000" }, "buyableQtyPerCustomer": "4071" }, { "time": { "$date": "2019-02-28T21:09:13.546+0000" }, "buyableQtyPerCustomer": 4071 }, { "time": { "$date": "2019-03-02T18:40:52.206+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:48:25.936+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:49:22.753+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-02T18:50:09.618+0000" }, "buyableQtyPerCustomer": null }, { "time": { "$date": "2019-03-03T11:13:47.375+0000" }, "buyableQtyPerCustomer": null } ], "rating": [ { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 40 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 }, { "value": 5.0, "totalValue": 5.0, "totalVote": 41 } ], "seller": { "name": "Dreaming Toy Store", "link": "https://www.aliexpress.com/store/1368152" }, "totalOrder": [ { "value": 325, "time": { "$date": "2019-02-28T17:16:40.601+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T17:28:37.744+0000" } }, { "value": 325, "time": { "$date": "2019-02-28T18:12:24.586+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:02:11.707+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:03:09.430+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:04:09.878+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:05:52.203+0000" } }, { "value": 327, "time": { "$date": "2019-02-28T21:09:13.546+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:40:52.206+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:48:25.936+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:49:22.753+0000" } }, { "value": 351, "time": { "$date": "2019-03-02T18:50:09.618+0000" } }, { "value": 345, "time": { "$date": "2019-03-03T11:13:47.374+0000" } } ], "url": "https://www.aliexpress.com/item/Electronic-Fish-Swim-Toy-Battery-Included-Robotic-Pet-for-Kids-Bath-Toy-Fishing-Tank-Decorating-Act/32949152144.html", "unit": "piece" } ]
 	$.fn.genListProducts = function(lstProduct){
 	    $('.productfilter').remove()
 		for(product in lstProduct){
 			var myitem=
-			'<div class="col-xl-4 col-md-6 grid-item new productfilter">'+
+			'<div class="col-xl-4 col-md-6 grid-item new productfilter" >'+
 				'<div class="product">'+
-					'<div class="product_image" style="max-height: 312px;min-height: 312px; cursor: pointer"><img style="max-height: 312px;min-height: 312px" src="'+lstProduct[product]["images"][0]+'" alt=""></div>'+
+					'<div class="product_image" id="'+lstProduct[product]["product_id"]+'" style="max-height: 312px;min-height: 312px; cursor: pointer"><img style="max-height: 312px;min-height: 312px" src="'+lstProduct[product]["images"][0]+'" alt=""></div>'+
 						'<div class="product_content">'+
 							'<div class="product_info d-flex flex-row align-items-start justify-content-start">'+
 								'<div>'+
@@ -658,17 +668,37 @@ Copyright &copy;2019 All rights reserved.</div>
 
 		}
     }
-	$.fn.genListProducts(productList)
-	$('.product_image').each(function (index,e) {
-		$(this).click(function (event) {
-			product_info = productList[index]
-			console.log(product_info)
-			location.href ="/product_detail/"+index
-		})
-	})
+	$('#datetimepicker').datetimepicker();
+
+	var productList=[]
+	jQuery.ajax({
+            url: '/list-products',
+            type: "POST",
+            processData: false,
+            contentType: "application/json",
+            success: function (result) {
+				console.log(result)
+				productList=result
+				var temp=[productList[0],productList[1],productList[2],productList[3],productList[4]]
+
+				$.fn.genListProducts(temp)
+				$('#product_list').css("height","auto");
+				$('.product_image').each(function (index,e) {
+					$(this).click(function (event) {
+
+						console.log($(this).attr("id"))
+						location.href ="/product_detail/"+$(this).attr("id");
+					})
+				})
+            }
+        })
+
+
+	// $.fn.genListProducts(productList)
 	$('#btnSearch').click(function () {
 		var time=$('#datetimepicker').val().toString();
-		var numoforder=$('#numoforders').val().toString();
+		var numoforder="3";
+		// var numoforder=$('#numoforders').val().toString();
 		console.log(time,numoforder)
 		var params=[{'time':time},{'#oforder':numoforder}]
 		jQuery.ajax({
@@ -680,24 +710,23 @@ Copyright &copy;2019 All rights reserved.</div>
             success: function (result) {
 				console.log(result)
 				$.fn.genListProducts(result)
+				$('#product_list').css("height","auto");
 				$('.product_image').each(function (index,e) {
 					$(this).click(function (event) {
-						product_info = productList[index]
-						console.log(product_info)
-						location.href ="/product_detail/"+index
+						product_info = productList[index];
+						console.log(product_info);
+						location.href ="/product_detail/"+$(this).attr("id");
 					})
 				})
             }
         })
 
     })
-	$('.product_image').each(function (index,e) {
-		$(this).click(function (event) {
-			product_info = productList[index]
-			console.log(product_info)
-			location.href ="/product_detail/"+index
-		})
-	})
+
+    setTimeout(function () {
+		$('#filter').trigger('click');
+    },1000)
+
 </script>
 </body>
 </html>
