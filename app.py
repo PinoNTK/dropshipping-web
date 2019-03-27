@@ -51,20 +51,20 @@ def producttemplate(id):
     return render_template('product.html')
 @app.route("/list-products",methods=["POST"])
 def getDefaultList():
-    with open('data/ecomCrawler.json',encoding="utf8") as f:
+    with open('data/ecomCrawler.json',encoding="utf-8-sig") as f:
         productList = json.load(f)
     myList = nomalizingData(productList)
     return myList
 @app.route("/get-product-list",methods=["POST"])
 def getItemByFiltering():
     info = request.get_data()
-    with open('data/ecomCrawler.json',encoding="utf8") as f:
+    with open('data/ecomCrawler.json',encoding="utf-8-sig") as f:
         productList = json.load(f)
     myList = nomalizingData(productList)
     return myList
 @app.route("/get-hot-list",methods=["POST","GET"])
 def getHotProducts():
-    with open('data/hotProducts.json',encoding="utf8") as f:
+    with open('data/hotProducts.json',encoding="utf-8-sig") as f:
         productList = json.load(f)
     myList = nomalizingData(productList)
     return myList
