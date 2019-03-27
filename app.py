@@ -62,6 +62,13 @@ def getItemByFiltering():
         productList = json.load(f)
     myList = nomalizingData(productList)
     return myList
+@app.route("/get-hot-list",methods=["POST","GET"])
+def getHotProducts():
+    with open('data/hotProducts.json',encoding="utf8") as f:
+        productList = json.load(f)
+    myList = nomalizingData(productList)
+    return myList
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8000, debug=True)

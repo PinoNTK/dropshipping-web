@@ -132,12 +132,11 @@
 	<main class="cd-main-content">
 		<div class="cd-tab-filter-wrapper">
 			<div class="cd-tab-filter">
-				<ul class="cd-filters">
+				<ul class="cd-filters" id="filterClass">
 					<li class="placeholder">
 						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
 					</li>
-					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
-					<!--<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Color 1</a></li>-->
+					<li class="filter"><a class="vendor selected" id="hot" style="cursor: pointer">Hot</a></li>
 					<!--<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Color 2</a></li>-->
 				</ul> <!-- cd-filters -->
 			</div> <!-- cd-tab-filter -->
@@ -669,38 +668,42 @@ Copyright &copy; 2019 All rights reserved. <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&
 		}
     }
 	$('#datetimepicker').datetimepicker();
-	$('#product_list').css("height","auto");
+
 	var productList=[]
 	jQuery.ajax({
-            url: '/list-products',
+            url: '/get-hot-list',
             type: "POST",
             processData: false,
             contentType: "application/json",
             success: function (result) {
 				console.log(result)
 				productList=result
-				var temp=[productList[0],productList[1],productList[2],productList[3],productList[4]]
 
-				$.fn.genListProducts(temp)
+				$.fn.genListProducts(productList)
 				$('#product_list').css("height","auto");
 				$('.product_image').each(function (index,e) {
 					$(this).click(function (event) {
-
+					    var product_id= $(this).attr("id")
+						var index = $.fn.findbyproductid(product_id, productList)
+						var product=productList[index]
+						$.fn.save2local(product_id, JSON.stringify(product))
 						console.log($(this).attr("id"))
-						location.href ="/product_detail/"+$(this).attr("id");
+						location.href ="/product_detail/"+product_id;
 					})
 				})
             }
         })
 
 
+
 	// $.fn.genListProducts(productList)
 	$('#btnSearch').click(function () {
+	    $(".vendor").remove();
 		var time=$('#datetimepicker').val().toString();
 		var numoforder="3";
-		// var numoforder=$('#numoforders').val().toString();
-		console.log(time,numoforder)
-		var params=[{'time':time},{'#oforder':numoforder}]
+		console.log(time,numoforder);
+		var params=[{'time':time},{'#oforder':numoforder}];
+
 		jQuery.ajax({
             url: '/get-product-list',
             type: "POST",
@@ -708,16 +711,81 @@ Copyright &copy; 2019 All rights reserved. <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&
             processData: false,
             contentType: "application/json",
             success: function (result) {
-				console.log(result)
-				$.fn.genListProducts(result)
+				console.log(result);
+				var productList=result;
+				$.fn.save2local("searchProductList",JSON.stringify(productList))
+				$.fn.genListProducts(productList);
 				$('#product_list').css("height","auto");
-				$('.product_image').each(function (index,e) {
-					$(this).click(function (event) {
-						product_info = productList[index];
-						console.log(product_info);
-						location.href ="/product_detail/"+$(this).attr("id");
-					})
-				})
+				var hot ='<li class="filter"><a class="vendor selected" id="hot" style="cursor: pointer">Hot</a></li>';
+				$('#filterClass').append(hot);
+				var allClass='<li class="filter" style="cursor: pointer"><a class="vendor" id="all">All</a></li>';
+				$('#filterClass').append(allClass);
+				$("#all").addClass('selected');
+				$("#hot").removeClass('selected');
+				// gen vendor bar
+				var lstVendors=$.fn.getlistofvendors(productList);
+				for(vendor in lstVendors){
+				    var vendorBar= '<li class="filter" style="cursor: pointer"><a class="vendor">'+lstVendors[vendor]+'</a></li>';
+				    $('#filterClass').append(vendorBar);
+				}
+
+				// Handle click on vendor bar
+				$('.vendor').click(function () {
+				    var productList=$.fn.loadDataFromLocalStorage("searchProductList");
+					if($(this).attr('id')=="all"){
+					    $.fn.genListProducts(productList);
+					    $('.vendor').removeClass('selected');
+					    $(this).addClass("selected");
+					    $.fn.genListProducts(productList);
+					    $.fn.handleclickonimage(productList);
+					}
+					else if($(this).attr('id')=="hot"){
+					    $('.vendor').removeClass('selected');
+					    $(this).addClass("selected");
+					    var productList=[];
+						jQuery.ajax({
+								url: '/get-hot-list',
+								type: "POST",
+								processData: false,
+								contentType: "application/json",
+								success: function (result) {
+									console.log(result)
+									productList=result
+
+									$.fn.genListProducts(productList)
+									$('#product_list').css("height","auto");
+									$('.product_image').each(function (index,e) {
+										$(this).click(function (event) {
+											var product_id= $(this).attr("id")
+											var index = $.fn.findbyproductid(product_id, productList)
+											var product=productList[index]
+											$.fn.save2local(product_id, JSON.stringify(product))
+											console.log($(this).attr("id"))
+											location.href ="/product_detail/"+product_id;
+										})
+									})
+								}
+							})
+					}
+					else {
+					    // var productList=$.fn.loadDataFromLocalStorage("searchProductList");
+					    $('.vendor').removeClass('selected');
+					    $(this).addClass("selected");
+					    var vendor=$(this).text();
+					    console.log(vendor);
+					    var lstproduct=$.fn.getlistproductsbyvendors(vendor,productList);
+					    console.log(lstproduct);
+						$.fn.genListProducts(lstproduct);
+						$.fn.handleclickonimage(lstproduct);
+
+					}
+                });
+
+
+
+
+				// click handle
+				$.fn.handleclickonimage(productList)
             }
         })
 
@@ -726,6 +794,66 @@ Copyright &copy; 2019 All rights reserved. <br> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&
     setTimeout(function () {
 		$('#filter').trigger('click');
     },1000)
+	// functions
+	$.fn.save2local=function (key,value) {
+		localStorage[key]=value
+    }
+    $.fn.findbyproductid=function (product_id,produclst) {
+	    var product_index
+		for (item in produclst){
+		    if(produclst[item]["product_id"]==product_id){
+		        product_index=produclst.indexOf(produclst[item])
+			}
+		}
+		return product_index
+    }
+    $.fn.getlistofvendors=function (productlst) {
+	    var lstVendors=[]
+		for(item in productlst){
+		    lstVendors.push(productlst[item]["vendor"])
+		}
+		return unique(lstVendors)
+    }
+    $.fn.getlistproductsbyvendors=function (vendor, productlst) {
+		var prolst=[]
+		for(item in productlst){
+		    if(productlst[item]["vendor"]==vendor){
+		        prolst.push(productlst[item])
+			}
+		}
+		return prolst
+    }
+    $.fn.handleclickonimage=function (productlist) {
+		$('.product_image').each(function (index,e) {
+					$(this).click(function (event) {
+						var product_id= $(this).attr("id")
+						var index = $.fn.findbyproductid(product_id, productlist)
+						var product=productList[index]
+						$.fn.save2local(product_id, JSON.stringify(product))
+						console.log($(this).attr("id"))
+						location.href ="/product_detail/"+product_id;
+					})
+		})
+    };
+	$.fn.loadDataFromLocalStorage=function (key) {
+	    var data=[]
+		for(var item in localStorage){
+		    if(item=key){
+		        data=JSON.parse(localStorage[item])
+			}
+		}
+		return data
+    };
+	function unique(arr) {
+		var u = {}, a = [];
+		for(var i = 0, l = arr.length; i < l; ++i){
+			if(!u.hasOwnProperty(arr[i])) {
+				a.push(arr[i]);
+				u[arr[i]] = 1;
+			}
+		}
+		return a;
+	}
 
 </script>
 </body>
